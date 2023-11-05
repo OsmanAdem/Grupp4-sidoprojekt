@@ -1,5 +1,8 @@
 import React from 'react';
 import './GomokuBoard.css';
+import image from '../src/img/Gomoku1.jpg'
+// import xImage from '../src/img/x.PNG'
+// import OImage from '../src/img/o.PNG'
 
 function GomokuBoard() {
   const board = [];
@@ -7,7 +10,8 @@ function GomokuBoard() {
 
 function clickOnTheSquares(e){
   if(e.target.innerHTML === ''){
-    e.target.innerHTML = player ? 'X' : 'O'
+    // e.target.innerHTML = `<span>${player ? `<img src="${xImage}" alt='' />` : `<img src="${oImage}" alt='' />`}</span>`
+    e.target.innerHTML = `<span>${player ? 'X' : 'O'}</span>`
     player = !player
   }
 }
@@ -23,12 +27,15 @@ function clickOnTheSquares(e){
   }
 
   return (
-    <div>
-      <h1>GOMOKU</h1>
+    <div className='game-container'>
+      <img src={image} alt='pic' className='background-img'></img>
+      <div className='content-container'>
+      <h1 className="Gomoku-title">GOMOKU</h1>
     <div className="gomoku-board">
       {board}
     </div>
     <button>New Game</button>
+    </div>
     </div>
   );
 }
