@@ -27,14 +27,16 @@
     color: #e35e3d;
     font-weight: bold;
     font-size: 25px;
+    font-family: Metal Mania;
   }
-  
+
   .o-cell {
     color: #e35e3d;
     font-weight: bold;
     font-size: 25px;
+    font-family: Metal Mania;
   }
-  
+
 
 .game-container {
     display: flex;
