@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import GomokuBoard from './GomokuBoard'
+import GomokuBoard from './components/GomokuBoard';
 
 
 function App() {

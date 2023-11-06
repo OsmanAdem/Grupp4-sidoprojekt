@@ -58,12 +58,12 @@
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    object-fit: cover;
+    /* object-fit: cover; */
     /* background:linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.50)); */
     background-position: center;
 }
 .Gomoku-title {
-    color: #e35e3d;
+    color: #eb8166;
     font-family: Metal Mania;
     top: 0;
     /* left: 665px; */
@@ -73,21 +73,21 @@
 .winner {
     color:#e35e3d;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 35px;
     font-family: Metal Mania;
     position: absolute;
-    margin-left: 220px;
+    margin-left: 190px;
     bottom: 50px;
+    text-shadow:3px 3px rgb(138, 4, 4);
 }
 button {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background: #e35e3d;
-    color: white;
+    color:black;
     box-shadow: 1px 5px 3px 1px #fa9980;
     height: 3rem;
     width: 9rem;
     border: none;
-    color: black;
     position: absolute;
     font-family: Metal mania;
     font-weight: 600;

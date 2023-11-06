@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './GomokuBoard.css'
-import image from '../src/img/Gomoku1.jpg'
+import image from '../img/Gomoku1.jpg'
 // import xImage from '../src/img/x.PNG'
 // import OImage from '../src/img/o.PNG'
 
@@ -116,7 +116,9 @@ function GomokuBoard() {
 
             <div>
                 <div className="gomoku-board">{cells}</div>
-                {winner ? <p className="winner">Player {winner} wins!</p> : null}
+                {winner ? (
+                    <p className="winner">Player {winner} wins!</p>
+                ) : null}
                 <button onClick={() => window.location.reload()}>
                     New Game
                 </button>
@@ -126,4 +128,3 @@ function GomokuBoard() {
 }
 
 export default GomokuBoard
-
