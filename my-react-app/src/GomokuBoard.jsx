@@ -97,7 +97,7 @@ function GomokuBoard() {
         row.map((cell, colIndex) => (
             <div
                 key={`cell-${rowIndex}-${colIndex}`}
-                className="cell"
+                className={`cell ${cell === 'X' ? 'x-cell' : 'o-cell'}`}
                 onClick={() => clickOnTheSquares(rowIndex, colIndex)}
             >
                 {cell}
@@ -116,7 +116,7 @@ function GomokuBoard() {
 
             <div>
                 <div className="gomoku-board">{cells}</div>
-                {winner ? <p>Player {winner} wins!</p> : null}
+                {winner ? <p className="winner">Player {winner} wins!</p> : null}
                 <button onClick={() => window.location.reload()}>
                     New Game
                 </button>
@@ -126,3 +126,4 @@ function GomokuBoard() {
 }
 
 export default GomokuBoard
+

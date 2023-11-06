@@ -23,6 +23,19 @@
     bottom: 800px;
 }
 
+.x-cell {
+    color: #e35e3d;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  
+  .o-cell {
+    color: #e35e3d;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  
+
 .game-container {
     display: flex;
     flex-direction: column;
@@ -51,8 +64,14 @@
     color: #e35e3d;
     font-family: Metal Mania;
     top: 0;
-    left: 700px;
+    left: 665px;
     position: absolute;
+    margin-top: 10px;
+}
+.winner {
+    color:#fa9980;
+    font-weight: bold;
+    font-size: 25px;
 }
 button {
     font-family: Georgia, 'Times New Roman', Times, serif;
