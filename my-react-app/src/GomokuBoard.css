@@ -51,7 +51,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 40px;
+    padding: 10px;
 }
 .background-img {
     width: 100%;
@@ -66,14 +66,18 @@
     color: #e35e3d;
     font-family: Metal Mania;
     top: 0;
-    left: 665px;
+    /* left: 665px; */
     position: absolute;
     margin-top: 10px;
 }
 .winner {
-    color:#fa9980;
+    color:#e35e3d;
     font-weight: bold;
     font-size: 25px;
+    font-family: Metal Mania;
+    position: absolute;
+    margin-left: 220px;
+    bottom: 50px;
 }
 button {
     font-family: Georgia, 'Times New Roman', Times, serif;
