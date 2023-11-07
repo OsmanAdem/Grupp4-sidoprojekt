@@ -127,14 +127,8 @@ function GomokuBoard() {
                 {winner ? (
                     <div>
                         <p className="winner">Player {winner} wins!</p>
-                        <p className="playerPointX">
-                            {' '}
-                            Player X points : {pointPlayerX}
-                        </p>
-                        <p className="playerPointO">
-                            {' '}
-                            Player O points : {pointPlayerO}
-                        </p>
+                        <p className="playerPointX"> Player X points : {pointPlayerX} </p>
+                        <p className="playerPointO"> Player O points : {pointPlayerO} </p>
                     </div>
                 ) : null}
                 <button onClick={() => window.location.reload()}>
