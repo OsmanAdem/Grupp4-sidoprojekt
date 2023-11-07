@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './GomokuBoard.css'
 import image from '../img/Gomoku1.jpg'
 // import xImage from '../src/img/x.PNG'
@@ -8,6 +8,8 @@ function GomokuBoard() {
     const [board, setBoard] = useState(Array(17).fill(Array(17).fill('')))
     const [player, setPlayer] = useState(true)
     const [winner, setWinner] = useState(null)
+    const [pointPlayerX, setPointsPlayerX] = useState(0)
+    const [pointPlayerO, setPointsPlayerO] = useState(0)
 
     // function clickOnTheSquares(e) {
     //     if (e.target.innerHTML === '') {
@@ -16,7 +18,13 @@ function GomokuBoard() {
     //         player = !player
     //     }
     // }
-
+    useEffect(() => {
+        if (winner === 'X') {
+            setPointsPlayerX(pointPlayerX + 1)
+        } else if (winner === 'O') {
+            setPointsPlayerO(pointPlayerO + 1)
+        }
+    }, [winner])
     function checkWinner(row, col) {
         const directions = [
             [1, 0],
@@ -117,7 +125,17 @@ function GomokuBoard() {
             <div>
                 <div className="gomoku-board">{cells}</div>
                 {winner ? (
-                    <p className="winner">Player {winner} wins!</p>
+                    <div>
+                        <p className="winner">Player {winner} wins!</p>
+                        <p className="playerPointX">
+                            {' '}
+                            Player X points : {pointPlayerX}
+                        </p>
+                        <p className="playerPointO">
+                            {' '}
+                            Player O points : {pointPlayerO}
+                        </p>
+                    </div>
                 ) : null}
                 <button onClick={() => window.location.reload()}>
                     New Game

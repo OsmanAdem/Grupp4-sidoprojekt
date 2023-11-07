@@ -103,3 +103,23 @@ span {
     font-family: Metal Mania;
     font-weight: 800;
 }
+.playerPointX{
+  color: #e35e3d;
+  font-family: Metal Mania;
+  font-size: 30px;
+  font-weight: 800;
+  position: absolute;
+  margin-left: 700px;
+  bottom: 150px;
+
+}
+
+.playerPointO{
+  color: #e35e3d;
+  font-family: Metal Mania;
+  font-size: 30px;
+  font-weight: 800;
+  position: absolute;
+  margin-left: 700px;
+  bottom: 200px;
+}
