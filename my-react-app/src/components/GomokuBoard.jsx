@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './GomokuBoard.css'
-import image from '../img/Gomoku1.jpg'
+import image from '../img/löv3.PNG'
 // import xImage from '../src/img/x.PNG'
 // import OImage from '../src/img/o.PNG'
 
@@ -123,7 +123,7 @@ function GomokuBoard() {
             </div>
 
             <div>
-                <div className="gomoku-board">{cells}</div>
+                <div className="gomoku-board"  data-layer="Content">{cells}</div>
                 {winner ? (
                     <div>
                         <p className="winner">Player {winner} wins!</p>

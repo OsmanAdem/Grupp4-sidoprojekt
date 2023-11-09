@@ -1,12 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
 .gomoku-board {
     display: grid;
     grid-template-columns: repeat(17, 30px);
     grid-template-rows: repeat(17, 30px);
     gap: 2px;
-    justify-content: center;
+    /* justify-content: center;
     align-items: center;
     margin: 20px;
-    padding-top: 60px;
+    padding-top: 60px; */
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .cell {
@@ -16,11 +27,10 @@
     justify-content: center;
     align-items: center;
     font-size: 16px;
-    /* background-color: darkgrey; */
     background-color: rgba(0, 0, 0, 0.6);
     border: 1px solid #e35e3d;
-    position: relative;
-    bottom: 800px;
+    /* position: relative; */
+    /* bottom: 800px; */
 }
 
 .x-cell {
@@ -28,98 +38,166 @@
     font-weight: bold;
     font-size: 25px;
     font-family: Metal Mania;
-  }
+}
 
-  .o-cell {
+.o-cell {
     color: #e35e3d;
     font-weight: bold;
     font-size: 25px;
     font-family: Metal Mania;
-  }
-
+}
 
 .game-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    position: relative;
     height: 100vh;
+    background-size: cover;
+    position: relative;
 }
 .content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    padding: 10px;
+    z-index: -1;
+    position: relative;
 }
 .background-img {
-    width: 100%;
+    /* width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    /* object-fit: cover; */
-    /* background:linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.50)); */
-    background-position: center;
+    background-position: center; */
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    /* opacity: 0.9.9; */
 }
 .Gomoku-title {
-    color: #ff7958;
+    color: #e35e3d;
     font-family: Metal Mania;
-    top: 0;
-    /* left: 665px; */
-    position: absolute;
-    margin-top: 10px;
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 .winner {
-    color:#e35e3d;
+    color: #e35e3d;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 30px;
     font-family: Metal Mania;
-    position: absolute;
-    margin-left: 190px;
-    bottom: 50px;
-    text-shadow:3px 3px rgb(138, 4, 4);
+    /* position: absolute; */
+    /* margin-left: 190px; */
+    /* bottom: 50px; */
+    text-shadow: 3px 3px rgb(138, 4, 4);
+
+    margin-top: 10px;
 }
 button {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background: #e35e3d;
-    color:black;
+    color: black;
     box-shadow: 1px 5px 3px 1px #fa9980;
     height: 3rem;
     width: 9rem;
     border: none;
-    position: absolute;
+
     font-family: Metal mania;
     font-weight: 600;
     font-size: x-large;
-    margin-left: -75px;
-    bottom: 10px;
+
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
 span {
-    /* transform: translate(-116%, -50%); */
     font-size: x-large;
     color: #e35e3d;
     font-family: Metal Mania;
     font-weight: 800;
 }
-.playerPointX{
-  color: #e35e3d;
-  font-family: Metal Mania;
-  font-size: 30px;
-  font-weight: 800;
-  position: absolute;
-  margin-left: 700px;
-  bottom: 150px;
-
+.playerPointX {
+    color: #e35e3d;
+    font-family: Metal Mania;
+    font-size: 30px;
+    font-weight: 800;
+    position: absolute;
+    margin-left: 650px;
+    bottom: 150px;
 }
 
+.playerPointO {
+    color: #e35e3d;
+    font-family: Metal Mania;
+    font-size: 30px;
+    font-weight: 800;
+    position: absolute;
+    margin-left: 650px;
+    bottom: 200px;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+    /* .game-container {
+        padding: 0;
+    }
+    .content-container {
+        padding: 3;
+    }
+
+    .background-img {
+        height: auto;
+    } */
+}
+@media screen and (max-width: 768px) {
+    .game-container {
+        height: auto;
+        padding: 20px;
+    }
+
+    /* .playerPointX {
+
+    } */
+
+    /* .gomoku-board {
+        grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+        gap: 0;
+    } */
+    /*
+  .Gomoku-title {
+    font-size: 24px;
+  } */
+}
+
+@media screen and (max-width: 768px) {
+    /* .gomoku-board {
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+  } */
+    /* .playerPointX{
+  margin-left: 55px;
+  bottom: 90px;
+}
 .playerPointO{
-  color: #e35e3d;
-  font-family: Metal Mania;
-  font-size: 30px;
-  font-weight: 800;
-  position: absolute;
-  margin-left: 700px;
-  bottom: 200px;
+  margin-left: 55px;
+  bottom: 60px;
+}
+.winner {
+  margin-bottom: 80px;
+} */
+}
+
+@media screen and (max-width: 1397px) {
+    .playerPointX {
+        margin-left: 100px;
+        bottom: 90px;
+    }
+    .playerPointO {
+        margin-left: 100px;
+        bottom: 60px;
+    }
+    .winner {
+        margin-bottom: 80px;
+    }
 }
