@@ -1,4 +1,4 @@
-import cy from 'cypress'
+// import cy from 'cypress'
 // import GomokuBoard from '../../src/components/GomokuBoard'
 // // describe('ComponentName.cy.jsx', () => {
 // //   it('playground', () => {
